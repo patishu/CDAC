@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 29, 2017 6:32:59 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="springHibernate.packgePojo" table="PACKGEPOJO">
+        <id name="pid" type="java.lang.String">
+            <column name="PID" />
+            <generator class="assigned" />
+        </id>
+        <property name="pname" type="java.lang.String">
+            <column name="PNAME" />
+        </property>
+        <property name="duration" type="java.lang.String">
+            <column name="DURATION" />
+        </property>
+        <property name="dod" type="java.lang.String">
+            <column name="DOD" />
+        </property>
+        <property name="amt" type="java.lang.String">
+            <column name="AMT" />
+        </property>
+        <property name="source" type="java.lang.String">
+            <column name="SOURCE" />
+        </property>
+        <property name="dest" type="java.lang.String">
+            <column name="DEST" />
+        </property>
+        <property name="img" type="java.lang.String">
+            <column name="IMG" />
+        </property>
+        <many-to-one name="email" class="springHibernate.travelPojo" fetch="join">
+            <column name="EMAIL" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
